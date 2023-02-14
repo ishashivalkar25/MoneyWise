@@ -1,42 +1,21 @@
 import React from 'react'
-import { View, Text, Linking} from 'react-native'
+import { View, Text} from 'react-native'
 import { darkGreen } from "./Constants";
 import Btn from "./Btn";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import ScanBills from './ScanBills';
+import RedirectToPaymentApps from './RedirectToPaymentApps';
+import ManualAdditionOfExpense from './ManualAdditionOfExpense';
 
-export default function AddExpense() {
+const Tab = createMaterialTopTabNavigator();
 
-    const addExpenseByScanningBills = () => {
-     
-    }
+export default function AddExpense(props) {
 
-    const redirectToPaymentApps = () => {
-        
-    }
-    
-    const addExpenseManually = () => {
-        
-    }
     return (
-        <View>
-            <Text>Add Expense</Text>
-            {/* <Btn
-              textColor="white"
-              bgColor={darkGreen}
-              btnLabel="Scan Receipt"
-              Press={addExpenseByScanningBills}
-            />
-            <Btn
-              textColor="white"
-              bgColor="pink"
-              btnLabel="Redirect to Payment Apps"
-              Press={() => Linking.openURL("myapp://GPay/" )}
-            />
-            <Btn
-              textColor="white"
-              bgColor={darkGreen}
-              btnLabel="Mannually Add Expense Record"
-              Press={addExpenseManually}
-            /> */}
-        </View>
+        <Tab.Navigator>
+          <Tab.Screen name="Scan Bills" component={ScanBills} />
+          <Tab.Screen name="Redirect To Payment Apps" component={RedirectToPaymentApps} />
+          <Tab.Screen name="Manual" component={ManualAdditionOfExpense} />
+        </Tab.Navigator>
     )
 }

@@ -1,0 +1,32 @@
+https://reactnavigation.org/docs/getting-started
+npm install @react-navigation/native
+npm install install react-native-screens react-native-safe-area-context
+npm install @react-navigation/native-stack
+
+Authentication documentation:
+https://firebase.google.com/docs/auth/web/start?authuser=1&hl=en
+
+npm install firebase@9.13.0 --save
+npm install @react-native-community/datetimepicker --save
+npm install react-native-dialog-input
+npm install @react-native-async-storage/async-storage
+
+npm install react-native-modal
+npm install --save react-native-image-picker 
+npm install react-native-root-toast
+npm install @react-navigation/material-top-tabs  
+npm install react-native-tab-view   
+npm install @react-navigation/material-bottom-tabs
+npm install @react-navigation/bottom-tabs   
+npm install react-native-element-dropdown
+npm install react-native-pager-view
+npm install @react-navigation/material-top-tabs react-native-tab-view
+
+ LOG  UPI :  9673209453@upi
+ LOG  response :  txnId=UPIf8cfcbd57518486f89993fbf68d81d92&responseCode=00&ApprovalRefNo=&Status=SUCCESS&txnRef=kdahskjahs27575fsdfasdas
+
+LOG  response :  txnId=UPI6f1ca86033124d798a5c3753eaacfe45&responseCode=U16&ApprovalRefNo=&Status=FAILURE&txnRef=304318156002
+
+npm install react-native-vision-camera
+npm i vision-camera-code-scanner
+npm i react-native-reanimated

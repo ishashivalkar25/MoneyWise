@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, Button, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Dimensions, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
 import React from 'react';
 import { auth } from '../Firebase/config'
 import { sendPasswordResetEmail, signInWithEmailAndPassword } from "firebase/auth";
@@ -8,7 +8,7 @@ import Background from "./Background";
 import Btn from "./Btn";
 import Field from "./Field";
 import { darkGreen } from "./Constants";
-
+const { width, height } = Dimensions.get("window");
 
 export default function Login(props) {
   const [userName, setUserName] = React.useState("");
@@ -88,22 +88,25 @@ export default function Login(props) {
 
   return (
     <Background>
-      <View style={{ alignItems: "center", width: "100%", marginTop:40}}>
+      <View style={{ justifyContent:"center", alignItems: "center", width: "100%",  height:height*0.15,}}>
         <Text
             style={{
+              flex:1,
               color: "white",
               fontSize: 64,
               fontWeight: "bold",
-              marginVertical: 20,
+              justifyContent:"center",
+             
             }}
         >
             Login
         </Text>
+        </View>
         <View 
           style={{
             backgroundColor: "white",
-            height: 700,
-            width: 460,
+            height: height*0.85,
+            width: width,
             borderTopLeftRadius: 130,
             paddingTop: 100,
             alignItems: "center",
@@ -181,7 +184,7 @@ export default function Login(props) {
           </View>
 
         </View>
-      </View>
+      
     </Background>
   );
 }

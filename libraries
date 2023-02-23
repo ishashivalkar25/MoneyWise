@@ -22,8 +22,8 @@ npm install react-native-element-dropdown
 npm install react-native-pager-view
 npm install @react-navigation/material-top-tabs react-native-tab-view
 
- LOG  UPI :  9673209453@upi
- LOG  response :  txnId=UPIf8cfcbd57518486f89993fbf68d81d92&responseCode=00&ApprovalRefNo=&Status=SUCCESS&txnRef=kdahskjahs27575fsdfasdas
+LOG  UPI :  9673209453@upi
+LOG  response :  txnId=UPIf8cfcbd57518486f89993fbf68d81d92&responseCode=00&ApprovalRefNo=&Status=SUCCESS&txnRef=kdahskjahs27575fsdfasdas
 
 LOG  response :  txnId=UPI6f1ca86033124d798a5c3753eaacfe45&responseCode=U16&ApprovalRefNo=&Status=FAILURE&txnRef=304318156002
 

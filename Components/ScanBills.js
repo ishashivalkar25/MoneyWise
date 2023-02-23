@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet, Text, View ,Button} from 'react-native'
-
+import Background from './Background';
 export default function ScanBills() {
    
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Hello</Text>
-        </View>
+        <Background>
+          
+        </Background>
       );
 }
 const styles = StyleSheet.create({

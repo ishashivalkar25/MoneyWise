@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, Button, KeyboardAvoidingView, ScrollView, TouchableOpacity, Pressable} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, KeyboardAvoidingView, ScrollView, TouchableOpacity, Pressable, Dimensions} from 'react-native';
 import React from 'react';
 import { auth , db } from '../Firebase/config'
 import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
@@ -9,7 +9,7 @@ import Btn from "./Btn";
 import Field from "./Field";
 import { darkGreen } from "./Constants";
 import { useNavigation } from '@react-navigation/core';
-
+const { width, height } = Dimensions.get("window");
 
 export default function SignUp(props) {
   const [name, setName] = React.useState("");
@@ -178,7 +178,7 @@ export default function SignUp(props) {
     <View>
       <Background>
         {/* <ScrollView contentContainerStyle={{paddingBottom: 120}}> */}
-          <View style={{alignItems: 'center', width: 460 }}>
+          <View style={{alignItems: 'center', width: width , height: height*0.18,}}>
             <Text
                 style={{
                   color: 'white',
@@ -201,8 +201,8 @@ export default function SignUp(props) {
           <View
           style={{
             backgroundColor: 'white',
-            height: '100%',
-            width: 460,
+            height: height*0.75,
+            width: width,
             borderTopLeftRadius: 130,
             paddingTop: 20,
             alignItems: 'center',

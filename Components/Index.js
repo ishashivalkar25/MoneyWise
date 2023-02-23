@@ -1,13 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground } from 'react-native'
 import Background from "./Background";
 import Btn from "./Btn";
 import { darkGreen, green } from "./Constants";
 import { useNavigation } from '@react-navigation/core';
 import { auth } from '../Firebase/config' 
+import {useSafeAreaInsets} from 'react-native-safe-area-context'; 
 
 const Index = (props) => {
-    
+    const insets = useSafeAreaInsets();
     const navigation = useNavigation();
     React.useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
@@ -20,15 +21,19 @@ const Index = (props) => {
     }, []);
   
     return (
-        <Background>
+        <View style={{marginTop:insets.top}}>
+        <ImageBackground
+          source={require('../assets/background4.jpg')}
+          style={{width: '100%', height: '100%'}}
+        >
            <View style={{marginTop:40}}></View>
             <View style={{ marginHorizontal: 50, marginVertical: 50 ,alignItems: 'center'}}>
-                <Text style={{ color: "#D0F0C0", fontSize: 40, fontWeight: "bold" ,}}>
-                MoneyWise 
+                <Text style={{ color: "white", fontSize: 40, fontWeight: "bold" ,}}>
+                Money<Text style={{ color: "orange", fontSize: 50, fontWeight: "bold" ,}}>W</Text>ise 
                 </Text>
                 <Text
                 style={{
-                    color: "#5E716A",
+                    color: "white",
                     fontSize: 18,
                     fontWeight: "bold",
                     marginBottom: 40,
@@ -98,7 +103,9 @@ const Index = (props) => {
                     </View>
                 </View>
             </View>  
-        </Background>
+           
+        </ImageBackground>
+        </View>
     )
 }
 
